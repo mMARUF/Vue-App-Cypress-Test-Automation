@@ -1,6 +1,5 @@
 // jest.config.ts
 import type { JestConfigWithTsJest } from 'ts-jest';
-
 const jestConfig: JestConfigWithTsJest = {
   // The test environment that will be used for testing
   testEnvironment: 'node',
