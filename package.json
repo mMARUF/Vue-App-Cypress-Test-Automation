@@ -6,7 +6,10 @@
     "lint": "prettier --write \"src/**/*.{ts,vue,js}\" && eslint \"**/*.{ts,vue,js}\" --fix && echo \"✅ All files passed linting!\"",
     "typecheck": "tsc --noEmit -p . && vue-tsc --noEmit && echo \"✅ All file types passed!\"",
     "selectorcheck": "./scripts/getSelectors.sh",
-    "postinstall": "echo \"App was installed sucessfully ✅\nYou can now run it by typing:\nnpm start\""
+    "postinstall": "echo \"App was installed sucessfully ✅\nYou can now run it by typing:\nnpm start\"",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "testunit": "jest"
   },
   "dependencies": {
     "@pinia/testing": "^0.0.12",
@@ -45,7 +48,6 @@
     "socket.io": "^4.0.1",
     "socket.io-client": "^4.1.2",
     "test-exclude": "^6.0.0",
-    "typescript": "^4.5.2",
     "vite": "^2.9.5",
     "vite-plugin-istanbul": "^2.9.0",
     "vite-svg-loader": "^3.1.0",
@@ -61,15 +63,28 @@
     "vuedraggable": "^4.1.0"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.14.5",
+    "@cypress/vue": "^6.0.2",
+    "@cypress/webpack-preprocessor": "^6.0.4",
+    "@types/jest": "^30.0.0",
     "@types/leaflet": "^1.7.11",
+    "@types/supertest": "^6.0.3",
+    "cypress": "^14.5.1",
+    "cypress-real-events": "^1.14.0",
+    "cypress-slow-down": "^1.3.1",
     "eslint": "^8.5.0",
     "eslint-plugin-no-only-tests": "^2.6.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "eslint-plugin-tailwind": "^0.2.1",
     "eslint-plugin-tailwindcss": "^3.0.4",
+    "jest": "^30.0.4",
     "prettier": "^2.5.1",
+    "supertest": "^7.1.3",
     "tailwindcss": "^3.0.7",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
     "vite-plugin-vue-env": "^1.0.6",
     "vue": "^3.2.26"
   }
